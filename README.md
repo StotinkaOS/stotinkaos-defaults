@@ -1,0 +1,1 @@
+StotinkaOS defaults configs
