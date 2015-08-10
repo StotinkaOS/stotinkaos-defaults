@@ -1,7 +1,7 @@
 Summary: StotinkaOS defaults configs
 Name:    stotinkaos-defaults
 Version: 0.2
-Release: 2%{?dist}.sos
+Release: 3%{?dist}.sos
 Group:   System Environment/Base
 License: GPLv3+
 Url:     http://stotinkaos.net/
@@ -41,15 +41,15 @@ rm -rf %{buildroot}
 # Enable PackageKit update checking by default
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t int /apps/gnome-packagekit/update-icon/frequency_get_updates 86400 2>/dev/null
 # Add a Keyboard Applet to the top panel
-gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type string --set /apps/panel/applets/keyboard/bonobo_iid OAFIID:GNOME_KeyboardApplet 2>/dev/null
-gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type string --set /apps/panel/applets/keyboard/object_type bonobo-applet 2>/dev/null
-gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type bool --set /apps/panel/applets/keyboard/panel_right_stick "false" 2>/dev/null
-gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type int --set /apps/panel/applets/keyboard/position 1098 2>/dev/null
-gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type string --set /apps/panel/applets/keyboard/toplevel_id top_panel 2>/dev/null
-gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type list --list-type string --set /apps/panel/general/applet_id_list "[clock,systray,show_desktop_button,window_list,workspace_switcher,keyboard,trash_​applet]" 2>/dev/null
+gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type string --set /apps/panel/applets/keyboard/bonobo_iid OAFIID:GNOME_KeyboardApplet
+gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type string --set /apps/panel/applets/keyboard/object_type bonobo-applet
+gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type bool --set /apps/panel/applets/keyboard/panel_right_stick false
+gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type int --set /apps/panel/applets/keyboard/position 1098
+gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type string --set /apps/panel/applets/keyboard/toplevel_id top_panel
+gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type list --list-type string --set /apps/panel/general/applet_id_list "[clock,systray,show_desktop_button,window_list,workspace_switcher,keyboard,trash_applet]"
 # Toggle keyboard layouts
-gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type list --list-type string --set /desktop/gnome/peripherals/keyboard/kbd/layouts "[us,bg]" 2>/dev/null
-gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type list --list-type string --set /desktop/gnome/peripherals/keyboard/kbd/options "[grp grp:alt_shift_toggle]" 2>/dev/null
+gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type list --list-type string --set /desktop/gnome/peripherals/keyboard/kbd/layouts "[us,bg]"
+gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type list --list-type string --set /desktop/gnome/peripherals/keyboard/kbd/options "[grp	grp:alt_shift_toggle]"
 # Switching to Thunderbird as the default MUA
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults --type string --set /desktop/gnome/url-handlers/mailto/command "thunderbird %" 2>/dev/null
 # Touchpad
@@ -89,6 +89,9 @@ gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults
 %{_sysconfdir}/profile.d/color_prompt.sh
 
 %changelog
+* Mon Aug 10 2015 Ivaylo Kuzev <ivo@stotinkaos.net> - 0.2-3 
+- Fix keyboard applet
+ 
 * Sat Jul 04 2015 Ivaylo Kuzev <ivo@stotinkaos.net> - 0.2-2
 - Revert to Bulgarian BDS keyboard layout
 - Remove fortune/cowsay
