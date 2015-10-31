@@ -1,7 +1,7 @@
 Summary: StotinkaOS defaults configs
 Name:    stotinkaos-defaults
 Version: 0.2
-Release: 3%{?dist}.sos
+Release: 4%{?dist}.sos
 Group:   System Environment/Base
 License: GPLv3+
 Url:     http://stotinkaos.net/
@@ -89,6 +89,9 @@ gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults
 %{_sysconfdir}/profile.d/color_prompt.sh
 
 %changelog
+* Sat Oct 31 2015 Ivaylo Kuzev <ivo@stotinkaos.net> - 0.2-4
+- Fix bash color prompt issue
+
 * Mon Aug 10 2015 Ivaylo Kuzev <ivo@stotinkaos.net> - 0.2-3 
 - Fix keyboard applet
  
