@@ -1,0 +1,66 @@
+## Assembler
+include "/usr/share/nano/asm.nanorc"
+
+## C/C++
+include "/usr/share/nano/c.nanorc"
+
+## Groff
+include "/usr/share/nano/groff.nanorc"
+
+## HTML
+include "/usr/share/nano/html.nanorc"
+
+## XML
+include "/usr/share/nano/xml.nanorc"
+
+## CSS
+include "/usr/share/nano/css.nanorc"
+
+## Java
+include "/usr/share/nano/java.nanorc"
+
+## Manpages
+include "/usr/share/nano/man.nanorc"
+
+## Quoted emails (under e.g. mutt)
+include "/usr/share/nano/mutt.nanorc"
+
+## Nanorc files
+include "/usr/share/nano/nanorc.nanorc"
+
+## Patch files
+include "/usr/share/nano/patch.nanorc"
+
+## Perl
+include "/usr/share/nano/perl.nanorc"
+
+## POV-Ray
+include "/usr/share/nano/pov.nanorc"
+
+## Python
+include "/usr/share/nano/python.nanorc"
+
+## Ruby
+include "/usr/share/nano/ruby.nanorc"
+
+## Bourne shell scripts
+include "/usr/share/nano/sh.nanorc"
+
+## TeX
+include "/usr/share/nano/tex.nanorc"
+
+## RPM SPEC
+include "/usr/share/nano/spec.nanorc"
+
+## CMAKE 
+include "/usr/share/nano/cmake.nanorc"
+
+## PHP
+include "/usr/share/nano/php.nanorc"
+
+## LUA
+include "/usr/share/nano/lua.nanorc"
+
+## OCAML
+include "/usr/share/nano/ocaml.nanorc"
+
