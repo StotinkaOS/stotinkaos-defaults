@@ -1,6 +1,5 @@
 # Background/Screensaver Settings
 [org.gnome.desktop.background]
-show-desktop-icons=false
 picture-uri='file:///usr/share/backgrounds/default.jpg'
 
 [org.gnome.desktop.screensaver]
@@ -25,14 +24,15 @@ monospace-font-name='Droid Sans Mono 11'
 
 [org.gnome.desktop.wm.preferences]
 titlebar-font='Noto Sans Bold 11'
+button-layout='appmenu:minimize,maximize,close'
 
 [org.gnome.settings-daemon.plugins.xsettings]
 hinting='slight'
 antialiasing='rgba'
 
-# Revert gtk-menu-image and gtk-button-images
+# Revert gtk-menu-image and gtk-button-images / show AppMenu
 [org.gnome.settings-daemon.plugins.xsettings]
-overrides={'Gtk/ButtonImages': <1>, 'Gtk/MenuImages': <1>}
+overrides={'Gtk/ShellShowsAppMenu': <0>, 'Gtk/ButtonImages': <1>, 'Gtk/MenuImages': <1>}
 
 # Gnome themes Settings
 [org.gnome.desktop.interface]
@@ -41,10 +41,16 @@ icon-theme='Moka'
 # Gnome Shell Settings
 [org.gnome.shell]
 always-show-log-out=true
-favorite-apps=['firefox.desktop', 'evolution.desktop', 'empathy.desktop', 'vlc.desktop', 'shotwell.desktop', 'libreoffice-writer.desktop', 'gnome-documents.desktop', 'nautilus.desktop', 'gnome-terminal.desktop']
+favorite-apps=['firefox.desktop', 'evolution.desktop', 'gnome-terminal.desktop', 'yumex.desktop']
 
 [org.gnome.shell]
-enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'top-icons@gnome-shell-extensions.gcampax.github.com', 'GPaste@gnome-shell-extensions.gnome.org']
+disable-extension-version-validation=true
+enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'top-icons@gnome-shell-extensions.gcampax.github.com', 'GPaste@gnome-shell-extensions.gnome.org', 'hide-app-icon@mrapp.sourceforge.com', 'remove-dropdown-arrows@mpdeimos.com', 'panel-favorites@gnome-shell-extensions.gcampax.github.com', 'nohotcorner@azuri.free.fr', 'panel-osd@berend.de.schouwer.gmail.com', 'impatience@gfxmonk.net']
+
+[org.gnome.shell.extensions.panel-osd]
+x-pos=96.0
+y-pos=96.0
+force-expand=true
 
 [org.gnome.desktop.interface]
 clock-show-date=true
@@ -53,3 +59,6 @@ clock-show-date=true
 [org.gnome.nautilus.desktop]
 home-icon-name='Домашна папка'
 trash-icon-name='Кошче'
+
+[org.gnome.nautilus.preferences]
+sort-directories-first=true
