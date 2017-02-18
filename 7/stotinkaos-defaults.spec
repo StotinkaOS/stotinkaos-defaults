@@ -2,8 +2,8 @@
 
 Summary: StotinkaOS defaults configs
 Name:    stotinkaos-defaults
-Version: 0.2
-Release: 2%{?dist}
+Version: 0.3
+Release: 3%{?dist}
 Group:   System Environment/Base
 License: GPLv3+
 Url:     http://stotinkaos.net/
@@ -19,6 +19,7 @@ Requires: gnome-shell-extension-panel-osd
 Requires: gnome-shell-extension-nohotcorner
 Requires: gnome-shell-impatience
 Requires(post): glib2
+Conflicts: stotinkaos-xfce-defaults
 BuildArch: noarch
 
 %description
@@ -67,6 +68,12 @@ glib-compile-schemas /usr/share/glib-2.0/schemas 2>/dev/null
 %{_datadir}/glib-2.0/schemas/org.stotinkaos.gschema.override
 
 %changelog
+* Sat Feb 18 2017 StotinkaOS Team <stotinkaos.bg@gmail.com> - 0.3-3
+- Add Conflicts stotinkaos-xfce-defaults
+* Tue Feb 14 2017 StotinkaOS Team <stotinkaos.bg@gmail.com> - 0.3-2
+- Fix keyboard
+* Mon Feb 13 2017 StotinkaOS Team <stotinkaos.bg@gmail.com> - 0.3-1
+- Add Cinnamon settings
 * Sun Dec 18 2016 StotinkaOS Team <stotinkaos.bg@gmail.com> - 0.2-2
 - Add missing Requires
 * Wed Nov 30 2016 StotinkaOS Team <stotinkaos.bg@gmail.com> - 0.2-1

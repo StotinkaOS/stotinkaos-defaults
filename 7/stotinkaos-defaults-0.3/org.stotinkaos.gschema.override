@@ -62,3 +62,51 @@ trash-icon-name='Кошче'
 
 [org.gnome.nautilus.preferences]
 sort-directories-first=true
+
+#########
+#### CINNAMON SETTINGS
+#########
+[org.cinnamon]
+favorite-apps=['cinnamon-settings.desktop', 'firefox.desktop', 'mozilla-thunderbird.desktop', 'vlc.desktop', 'shotwell.desktop', 'libreoffice-writer.desktop', 'nemo.desktop', 'gpk-application.desktop', 'yumex.desktop']
+
+[org.cinnamon.desktop.background]
+picture-uri="file:///usr/share/backgrounds/default.jpg"
+
+[org.cinnamon.desktop.interface]
+icon-theme="Moka"
+gtk-theme="Adwaita"
+font-name='Noto Sans 11'
+buttons-have-icons=true
+
+[org.cinnamon.desktop.wm.preferences]
+titlebar-font='Noto Sans Bold 11'
+
+[org.gnome.libgnomekbd.keyboard]
+layouts=['us', 'bg']
+options=['grp\tgrp:alt_shift_toggle']
+
+[org.cinnamon.settings-daemon.peripherals.touchpad]
+disable-while-typing=true
+scroll-method="two-finger-scrolling"
+tap-to-click=true
+horiz-scroll-enabled=true
+
+[org.cinnamon.settings-daemon.plugins.xsettings]
+antialiasing='rgba'
+hinting='slight'
+
+[org.nemo.desktop]
+font='Noto Sans 11'
+computer-icon-visible=true
+home-icon-visible=true
+trash-icon-visible=true
+volumes-visible=true
+show-desktop-icons=true
+
+[org.cinnamon.desktop.screensaver]
+ask-for-away-message=false
+font-date='Noto Sans 24'
+font-message='Noto Sans 14'
+show-clock=true
+font-time='Noto Sans 64'
+
