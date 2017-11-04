@@ -2,8 +2,8 @@
 
 Summary: StotinkaOS defaults configs
 Name:    stotinkaos-defaults
-Version: 0.3
-Release: 3%{?dist}
+Version: 0.4
+Release: 1%{?dist}
 Group:   System Environment/Base
 License: GPLv3+
 Url:     http://stotinkaos.net/
@@ -12,9 +12,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: google-noto-sans-fonts google-noto-serif-fonts google-droid-sans-mono-fonts
 Requires: freetype-freeworld
 Requires: faba-icon-theme faba-mono-icons moka-icon-theme
-Requires: gnome-shell-extension-remove-dropdown-arrows
 Requires: gnome-shell-extension-panel-favorites
-Requires: gnome-shell-extension-hide-app-icon
 Requires: gnome-shell-extension-panel-osd
 Requires: gnome-shell-extension-nohotcorner
 Requires: gnome-shell-impatience
@@ -68,6 +66,8 @@ glib-compile-schemas /usr/share/glib-2.0/schemas 2>/dev/null
 %{_datadir}/glib-2.0/schemas/org.stotinkaos.gschema.override
 
 %changelog
+* Tue Oct 17 2017 StotinkaOS Team <stotinkaos.bg@gmail.com> - 0.4-1
+- Update to 7.4 release
 * Sat Feb 18 2017 StotinkaOS Team <stotinkaos.bg@gmail.com> - 0.3-3
 - Add Conflicts stotinkaos-xfce-defaults
 * Tue Feb 14 2017 StotinkaOS Team <stotinkaos.bg@gmail.com> - 0.3-2

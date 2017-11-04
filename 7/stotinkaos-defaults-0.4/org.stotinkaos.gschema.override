@@ -1,6 +1,7 @@
 # Background/Screensaver Settings
 [org.gnome.desktop.background]
 picture-uri='file:///usr/share/backgrounds/default.jpg'
+show-desktop-icons=true
 
 [org.gnome.desktop.screensaver]
 picture-uri='file:///usr/share/backgrounds/default-screensaver.jpg'
@@ -23,29 +24,30 @@ document-font-name='Noto Sans 11'
 monospace-font-name='Droid Sans Mono 11'
 
 [org.gnome.desktop.wm.preferences]
-titlebar-font='Noto Sans Bold 11'
-button-layout='appmenu:minimize,maximize,close'
+titlebar-font='Noto Sans Bold 10'
+titlebar-uses-system-font=false
+focus-mode='click'
 
 [org.gnome.settings-daemon.plugins.xsettings]
 hinting='slight'
 antialiasing='rgba'
 
-# Revert gtk-menu-image and gtk-button-images / show AppMenu
-[org.gnome.settings-daemon.plugins.xsettings]
-overrides={'Gtk/ShellShowsAppMenu': <0>, 'Gtk/ButtonImages': <1>, 'Gtk/MenuImages': <1>}
-
 # Gnome themes Settings
 [org.gnome.desktop.interface]
 icon-theme='Moka'
 
+# Revert gtk-menu-image and gtk-button-images / show AppMenu
+[org.gnome.settings-daemon.plugins.xsettings]
+overrides={'Gtk/ShellShowsAppMenu': <0>, 'Gtk/ButtonImages': <1>, 'Gtk/MenuImages': <1>}
+
 # Gnome Shell Settings
 [org.gnome.shell]
 always-show-log-out=true
-favorite-apps=['firefox.desktop', 'evolution.desktop', 'gnome-terminal.desktop', 'yumex.desktop']
+favorite-apps=['firefox.desktop', 'evolution.desktop', 'gnome-terminal.desktop', 'org.gnome.Software.desktop', 'sos-easy-install.desktop']
 
 [org.gnome.shell]
 disable-extension-version-validation=true
-enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'top-icons@gnome-shell-extensions.gcampax.github.com', 'GPaste@gnome-shell-extensions.gnome.org', 'hide-app-icon@mrapp.sourceforge.com', 'remove-dropdown-arrows@mpdeimos.com', 'panel-favorites@gnome-shell-extensions.gcampax.github.com', 'nohotcorner@azuri.free.fr', 'panel-osd@berend.de.schouwer.gmail.com', 'impatience@gfxmonk.net']
+enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'top-icons@gnome-shell-extensions.gcampax.github.com', 'GPaste@gnome-shell-extensions.gnome.org', 'panel-favorites@gnome-shell-extensions.gcampax.github.com', 'nohotcorner@azuri.free.fr', 'panel-osd@berend.de.schouwer.gmail.com', 'impatience@gfxmonk.net']
 
 [org.gnome.shell.extensions.panel-osd]
 x-pos=96.0
@@ -60,7 +62,10 @@ clock-show-date=true
 home-icon-name='Домашна папка'
 trash-icon-name='Кошче'
 
-[org.gnome.nautilus.preferences]
+[org.gnome.nautilus.icon-view]
+default-zoom-level='small'
+
+[org.gtk.Settings.FileChooser]
 sort-directories-first=true
 
 #########
