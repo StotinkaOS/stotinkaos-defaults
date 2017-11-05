@@ -12,10 +12,9 @@ sources=[('xkb', 'us'), ('xkb', 'bg')]
 xkb-options=['grp:alt_shift_toggle']
 
 # Touchpad Settings
-[org.gnome.settings-daemon.peripherals.touchpad]
+[org.gnome.desktop.peripherals.touchpad]
 tap-to-click=true
-scroll-method='two-finger-scrolling'
-disable-while-typing=true
+two-finger-scrolling-enabled=true
 
 # Fonts Settings
 [org.gnome.desktop.interface]
