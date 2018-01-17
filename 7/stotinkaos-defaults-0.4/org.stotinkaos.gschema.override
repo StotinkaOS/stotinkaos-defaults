@@ -15,6 +15,7 @@ xkb-options=['grp:alt_shift_toggle']
 [org.gnome.desktop.peripherals.touchpad]
 tap-to-click=true
 two-finger-scrolling-enabled=true
+natural-scroll=false
 
 # Fonts Settings
 [org.gnome.desktop.interface]
@@ -42,11 +43,11 @@ overrides={'Gtk/ShellShowsAppMenu': <0>, 'Gtk/ButtonImages': <1>, 'Gtk/MenuImage
 # Gnome Shell Settings
 [org.gnome.shell]
 always-show-log-out=true
-favorite-apps=['firefox.desktop', 'evolution.desktop', 'gnome-terminal.desktop', 'org.gnome.Software.desktop', 'sos-easy-install.desktop']
+favorite-apps=['firefox.desktop', 'evolution.desktop', 'gnome-terminal.desktop', 'yumex.desktop', 'sos-easy-install.desktop']
 
 [org.gnome.shell]
 disable-extension-version-validation=true
-enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'top-icons@gnome-shell-extensions.gcampax.github.com', 'GPaste@gnome-shell-extensions.gnome.org', 'panel-favorites@gnome-shell-extensions.gcampax.github.com', 'nohotcorner@azuri.free.fr', 'panel-osd@berend.de.schouwer.gmail.com', 'impatience@gfxmonk.net']
+enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'top-icons@gnome-shell-extensions.gcampax.github.com', 'GPaste@gnome-shell-extensions.gnome.org', 'panel-favorites@gnome-shell-extensions.gcampax.github.com', 'nohotcorner@azuri.free.fr', 'panel-osd@berend.de.schouwer.gmail.com', 'impatience@gfxmonk.net', 'add-username-toppanel@brendaw.com']
 
 [org.gnome.shell.extensions.panel-osd]
 x-pos=96.0
@@ -63,6 +64,7 @@ trash-icon-name='Кошче'
 
 [org.gnome.nautilus.icon-view]
 default-zoom-level='small'
+thumbnail-size=48
 
 [org.gtk.Settings.FileChooser]
 sort-directories-first=true

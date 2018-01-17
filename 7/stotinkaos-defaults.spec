@@ -3,7 +3,7 @@
 Summary: StotinkaOS defaults configs
 Name:    stotinkaos-defaults
 Version: 0.4
-Release: 1%{?dist}
+Release: 4%{?dist}
 Group:   System Environment/Base
 License: GPLv3+
 Url:     http://stotinkaos.net/
@@ -66,6 +66,14 @@ glib-compile-schemas /usr/share/glib-2.0/schemas 2>/dev/null
 %{_datadir}/glib-2.0/schemas/org.stotinkaos.gschema.override
 
 %changelog
+* Sat Nov 25 2017 StotinkaOS Team <stotinkaos.bg@gmail.com> - 0.4-4
+- Revert Yumex
+* Thu Nov 23 2017 StotinkaOS Team <stotinkaos.bg@gmail.com> - 0.4-3
+- Fix natural scroll
+- Fix nautilus thumbnail size
+- Add gnome-shell-extension-add-username-toppanel
+* Sun Nov 05 2017 StotinkaOS Team <stotinkaos.bg@gmail.com> - 0.4-2
+- Fix touchpad settings
 * Tue Oct 17 2017 StotinkaOS Team <stotinkaos.bg@gmail.com> - 0.4-1
 - Update to 7.4 release
 * Sat Feb 18 2017 StotinkaOS Team <stotinkaos.bg@gmail.com> - 0.3-3
